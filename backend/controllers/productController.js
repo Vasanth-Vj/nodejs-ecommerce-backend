@@ -19,7 +19,7 @@ exports.getProducts = catchAsyncError(async (req, res, next)=>{
         productsCount = filteredProductsCount;
     }
     
-    const products = await buildQuery().paginate(resPerPage).query;
+    const products = await buildQuery().paginate(resPerPage).query; 
 
     res.status(200).json({
         success : true,

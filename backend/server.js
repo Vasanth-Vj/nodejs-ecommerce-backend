@@ -5,6 +5,11 @@ const connectDatabase = require('./config/database');
 
 connectDatabase();
 
+app.get('/', (req, res) => {
+    console.log('Server is running.');
+    res.send('Server is running.');  // res.send use - display that contains.
+})
+
 const server = app.listen(process.env.PORT,()=>{
     console.log(`My Server listening to the port: ${process.env.PORT} in  ${process.env.NODE_ENV} `)
 })
